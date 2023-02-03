@@ -1,0 +1,41 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white card-body p-5 text-center" style="border-radius: 1rem;">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm" >
+           
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" id="titulo" class="form-control" placeholder="Título" name="titulo" [(ngModel)]="titulo" required>
+                        <label class="form-label" for="titulo"></label>
+                      </div>
+    
+                      <div class="form-outline form-white mb-4">
+                        <input type="text" id="institucion" class="form-control" placeholder="Institución educativa" name="institucion" [(ngModel)]="institucion" required>
+                        <label class="form label" for="institucion"></label>
+                    </div>
+                      
+                      <div class="form-outline form-white mb-4">
+                        <input type="text" id="promedio" class="form-control" placeholder="Promedio" name="promedio" [(ngModel)]="promedio" required>
+                        <label class="form-label" for="promedio"></label>
+                    </div>
+                      <div class="form-outline form-white mb-4">
+                        <input type="text" id="periodo" class="form-control" placeholder="Período" name="periodo" [(ngModel)]="periodo" required>
+                        <label class="form-label" for="periodo"></label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                        <input type="file" class="form-control" placeholder="Imagen" id="img" name="img" [(ngModel)]="img" required>
+                        <label class="form-label" for="img"></label>
+                    </div>
+                
+                <button class="btn btn-outline-light px-5" type="submit">Agregar educación</button>
+
+                </form>
+              </div>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </section>
