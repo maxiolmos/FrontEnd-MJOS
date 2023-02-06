@@ -9,6 +9,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { CursosComponent } from './components/cursos/cursos.component';
+import { EditCursosComponent } from './components/edit-cursos.component';
+import { NewCursosComponent } from './components/cursos/new-cursos.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
     EducacionComponent,
     EditEducacionComponent,
     NewEducacionComponent,
+    ContactoComponent,
+    CursosComponent,
+    EditCursosComponent,
+    NewCursosComponent,
   
   ],
   imports: [
