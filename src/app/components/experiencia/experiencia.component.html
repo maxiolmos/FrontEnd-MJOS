@@ -1,0 +1,39 @@
+<section>
+
+    <div class="d-flex">
+      <h1>Experiencia</h1>          
+      <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">Agregar experiencia</button>     
+    </div>
+  
+  
+      <div class="list-group w-auto list-group-item list-group-item-action text-bg-dark gap-3 py-3"> 
+         <div *ngFor="let Experiencia of experiencia">
+              <div class="row">
+              <div class="col-1">
+                <img src="" width="70" height="70">
+              </div>
+              <div class="col-10 cursos">
+              <h2 class="mb-0">{{Experiencia.experiencia}}</h2>
+              <p class="mb-0 opacity-75">{{Experiencia.empresa}}</p>
+              <p class="mb-0 opacity-75">{{Experiencia.tareas}}</p>
+              <p class="mb-0 opacity-75">{{Experiencia.periodo}}</p>
+              </div>
+              <div class="col-1">
+              <span class="boton" *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                  <i class="bi bi-pencil-fill"></i>
+              </button>
+              </span>
+              <span class="boton" *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                  <i class="bi bi-trash3"></i>
+              </button>
+              </span>
+            </div>
+              
+             </div>
+          </div>
+          </div>
+  
+        
+     </section>

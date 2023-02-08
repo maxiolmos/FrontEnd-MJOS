@@ -1,0 +1,44 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white card-body p-5 text-center" style="border-radius: 1rem;">
+            <div class="mb-md-5 mt-md-4 pb-5">
+  
+              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="experiencia" class="form-control" placeholder="Cargo desarrollado" name="experiencia" [(ngModel)]="experiencia" required>
+                  <label class="form-label" for="experiencia"></label>
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="empresa" class="form-control" placeholder="Empresa" name="empresa" [(ngModel)]="empresa" required>
+                  <label class="form-label" for="empresa"></label>
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="tareas" class="form-control" placeholder="Tareas realizadas" name="tareas" [(ngModel)]="tareas" required>
+                  <label class="form-label" for="tareas"></label>
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="periodo" class="form-control" placeholder="Período" name="periodo" [(ngModel)]="periodo" required>
+                  <label class="form-label" for="periodo"></label>
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="file" class="form-control" placeholder="Imagen" id="img" name="img" [(ngModel)]="img" required>
+                  <label class="form-label" for="img"></label>
+                </div>
+  
+                  <button class="btn btn-outline-light px-5" type="submit">Agregar experiencia</button> 
+                  
+              </form>
+  
+            </div>
+           </div>
+          </div>
+       </div>
+     </div>
+  </section>
+  
