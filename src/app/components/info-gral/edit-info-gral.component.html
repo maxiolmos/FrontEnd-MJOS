@@ -1,0 +1,41 @@
+<section class="vh-100">
+    <div class="container py-5 h-100" *ngIf="persona">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white card-body p-5 text-center" style="border-radius: 1rem;">
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
+           
+                  <div class="form-outline form-white mb-4">
+                    <input type="text" id="nombreCompleto" class="form-control" placeholder="Nombre completo" name="nombreCompleto" [(ngModel)]="persona.nombreCompleto" required/>
+                    <label class="form-label" for="nombreCompleto"></label>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                      <input type="text" id="profesion1" class="form-control" placeholder="Primera profesión" name="profesion1" [(ngModel)]="persona.profesion1" required>
+                      <label class="form-label" for="profesion1"></label>
+                    </div>
+                  
+                  <div class="form-outline form-white mb-4">
+                    <input type="text" id="profesion2" class="form-control" placeholder="Segunda profesión" name="profesion2" [(ngModel)]="persona.profesion2" required>
+                    <label class="form-label" for="profesion2"></label>
+                </div>
+                  <div class="form-outline form-white mb-4">
+                    <input type="text" id="lugarResidencia" class="form-control" placeholder="Lugar de residencia" name="lugarResidencia" [(ngModel)]="persona.lugarResidencia" required>
+                    <label class="form-label" for="lugarResidencia"></label>
+                </div>
+                <div class="form-outline form-white mb-4">
+                    <input type="file" class="form-control" placeholder="Imagen" id="img" name="img" [(ngModel)]="persona.img">
+                    <label class="form-label" for="img"></label>
+                </div>
+                
+                <button class="btn btn-outline-light px-5" type="submit">Editar información general</button>
+
+                </form>
+              </div>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </section>
