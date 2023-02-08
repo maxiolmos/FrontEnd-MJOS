@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 const TOKEN_KEY = "AuthToken";
 const USERNAME_KEY  = "AuthUserName";
 const AUTHORITIES_KEY = "AuthAuthorities";
@@ -36,18 +37,18 @@ export class TokenService {
   }
 
   public getAuthorities(): string[] {
-    return this.roles = [];
+    this.roles = [];
     if(sessionStorage.getItem(AUTHORITIES_KEY)!){
       JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) => {
         this.roles.push(authority.authority);
-      })
+      });
  
-    } 
+    }   
     return this.roles;
   }
 
   public logOut(): void{
     window.sessionStorage.clear();
   }
-  
+
 }
