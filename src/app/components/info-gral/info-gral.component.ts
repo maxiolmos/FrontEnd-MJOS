@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./info-gral.component.css']
 })
 export class InfoGralComponent implements OnInit{
-  persona: persona = new persona("","","","","");
+  persona: persona = null;
   isLogged= false;
 
   constructor(private personaService: PersonaService, private tokenService: TokenService) {}

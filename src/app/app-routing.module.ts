@@ -9,11 +9,13 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditHabilidadesComponent } from './components/habilidades/edit-habilidades.component';
 import { NewHabilidadesComponent } from './components/habilidades/new-habilidades.component';
 import { HomeComponent } from './components/home/home.component';
+import { EditInfoGralComponent } from './components/info-gral/edit-info-gral.component';
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent},
   { path:'login', component: LoginComponent},
+  { path:'editinfogral/:id', component: EditInfoGralComponent},
   { path:'nuevaexp', component: NewExperienciaComponent},
   { path:'editexp/:id', component: EditExperienciaComponent},
   { path:'nuevaedu', component: NewEducacionComponent},

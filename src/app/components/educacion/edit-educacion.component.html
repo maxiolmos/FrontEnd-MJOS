@@ -26,9 +26,15 @@
                     <label class="form-label" for="periodo"></label>
                 </div>
                 <div class="form-outline form-white mb-4">
-                    <input type="file" class="form-control" placeholder="Imagen" id="img" name="img" [(ngModel)]="educacion.img" required>
+                    <input type="file" class="form-control" placeholder="Imagen" id="img" name="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                     <label class="form-label" for="img"></label>
                 </div>
+                <div class="imagen">
+                    <img [src]="educacion.img" width="140px" *ngIf='imageService.url == ""'>
+                    <img [src]="imageService.url" width="140px" *ngIf='imageService.url != ""'>
+                </div>
+                
+                <br>
                 
                 <button class="btn btn-outline-light px-5" type="submit">Editar educación</button>
 

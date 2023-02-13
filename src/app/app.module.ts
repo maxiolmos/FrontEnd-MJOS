@@ -7,12 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InfoGralComponent } from './components/info-gral/info-gral.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -26,6 +24,9 @@ import { EditCursosComponent } from './components/cursos/edit-cursos.component';
 import { NewCursosComponent } from './components/cursos/new-cursos.component';
 import { EditInfoGralComponent } from './components/info-gral/edit-info-gral.component';
 import { interceptorProvider } from './service/interceptor.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -33,12 +34,10 @@ import { interceptorProvider } from './service/interceptor.service';
     AppComponent,
     HeaderComponent,
     InfoGralComponent,
-    MenuComponent,
     ExperienciaComponent,
     EducacionComponent,
     CursosComponent,
     HabilidadesComponent,
-    ContactoComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
@@ -51,12 +50,15 @@ import { interceptorProvider } from './service/interceptor.service';
     EditCursosComponent,
     NewCursosComponent,
     EditInfoGralComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     interceptorProvider,

@@ -9,16 +9,16 @@
       <div class="list-group w-auto list-group-item list-group-item-action text-bg-dark gap-3 py-3"> 
          <div *ngFor="let Cursos of cursos">
               <div class="row">
-              <div class="col-1">
-                <img src="" width="70" height="70">
+              <div class="col-lg-1 col-md-2 col-sm-4">
+                <img src={{Cursos.img}} class="img-fluid" width="115" height="100">
               </div>
-              <div class="col-10 cursos">
+              <div class="col-lg-10 col-md-8 col-sm-4 cursos">
               <h2 class="mb-0">{{Cursos.curso}}</h2>
               <p class="mb-0 opacity-75">{{Cursos.institucionCurso}}</p>
               <p class="mb-0 opacity-75">{{Cursos.fechaFinalizacion}}</p>
               <p class="mb-0 opacity-75">{{Cursos.estado}}</p>
               </div>
-              <div class="col-1">
+              <div class="col-lg-1 col-md-2 col-sm-4">
               <span class="boton" *ngIf="isLogged">
                 <button class="btn btn-light" routerLink="/editcurso/{{Cursos.id}}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">

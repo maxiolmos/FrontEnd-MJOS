@@ -20,7 +20,7 @@
       <tbody *ngFor="let habilidades of habilidades">
         <tr>
           <th scope="row" rowspan="3">{{habilidades.grupo}}</th>
-          <td><img src="" width="50" height="50"> {{habilidades.nombre}}</td>
+          <td><img src={{habilidades.img}} width="50" height="50"> {{habilidades.nombre}}</td>
           <td>{{habilidades.categoria}}</td>
           <td><span class="badge text-bg-light">{{habilidades.nivel}}</span></td>
           <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/edithab/{{habilidades.id}}">
